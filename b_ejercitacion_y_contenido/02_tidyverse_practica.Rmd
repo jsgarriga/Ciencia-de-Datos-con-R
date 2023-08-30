@@ -1,0 +1,167 @@
+---
+title: "Procesando datos con el paquete tidyverse"
+subtitle: "R + Ciencias Sociales"
+output:
+  html_document:
+    toc: yes
+    toc_float: yes
+---
+
+<br>
+
+## Procesamiento de datos con paquete `tidyverse` - Aplicacion con EPH
+
+<br>
+
+Luego de abordar las principales funciones necesarias para operar sobre las bases de datos, veremos su aplicación con la base individual de la EPH. 
+
+
+En primer lugar, importamos la base de datos, sea [descargándola de la página del indec](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos) y luego importándola en R (funciones como `read.table()`, por ejemplo), o utilizando el paquete `{eph}` y la función que directamente nos permite crear un objeto y en él la base (`get_microdata()`).
+
+<br>
+
+
+### **Ejercicio 1** - Cargamos la base de datos
+
+1.1.Levantar la base individual del primer trimestre de 2021.
+
+```{r}
+
+```
+
+<br>
+
+### **Ejercicio 2** - Conociendo los datos
+
+2.1. Obtener la estructura básica de nuestro dataframe (_pista: funciónes como `str()`, `summary()`, `colnames()` pueden servir_).
+
+```{r}
+
+```
+
+<br>
+
+2.2. Obtener los estadísticos principales de la distribución del ingreso de la ocupación principal (Variable *P21*; funciones `mean()`, `median()`, `max()`, `min()` o directamente `summary()`):
+
+```{r}
+
+```
+
+
+<br>
+
+2.3. Generar frecuencia simple de la variable **ESTADO** (cuántas veces aparece cada categoría):
+
+```{r}
+
+```
+
+
+<br>
+
+### **Ejercicio 3** - Transformaciones de la base de datos
+
+
+Cargamos la librería __tidyverse__ que vamos a utilizar para trabajar la base.
+
+```{r warning=FALSE, message=FALSE}
+library(tidyverse)
+```
+
+3.1. Filtrar nuestra base para quedarnos solo con las observaciones de la región 43 y guardarlo en un objeto que se llame **pampeana**
+
+
+```{r}
+
+```
+
+<br>
+
+3.2. Cambiar el nombre de la variable **P21** por **ingreso_OP** y guardarlo en la misma base de datos.
+
+```{r}
+
+
+```
+
+<br>
+
+3.3. Crear una nueva variable llamada **ingreso_horario** que sea el ingreso por hora de la ocupación principal (*P21*/*PP3E_TOT*). Guadar dicha operación en el mismo objeto y chequear que se haya hecho.
+
+```{r}
+
+```
+
+<br>
+
+3.4. Crear una variable llamada **nivel_ed2** que agrupe los niveles educativos de la variable **NIVEL_ED** en los siguientes 4:
+
+* Sin educación, primaria incompleta, o Ns.Nr.
+* Hasta secundaria incompleta
+* Hasta universitaria incompleta
+* Universitaria completa
+
+Guardar dicho resultado en el mismo objeto con el que venimos trabajando y chequear que la operación se haya hecho.
+
+```{r}
+
+```
+
+<br>
+
+3.5. Quedarnos solo con las siguientes variables de la base de datos:
+
+*ANO4*, *TRIMESTRE*, *REGION*, *AGLOMERADO*, *ESTADO*, *PONDERA*
+
+y guardarlo en un nuevo objeto llamado **recorte**.
+
+```{r}
+
+
+```
+
+<br>
+
+
+3.7. Crear una tabla llamada **poblacion_ocupados** que me de la información del total de población y el total de los ocupados.
+
+Nota:
+ - Población: Si contaramos cuantos registros tiene la base, simplemente tendríamos el numero de individuos muestral de la EPH, por ende debemos **sumar los valores de la variable PONDERA**, para contemplar a cuantas personas representa cada individuo encuestado. 
+ - Ocupados: En este caso, debemos agregar un **filtro** al procedimiento anterior, ya que únicamente queremos sumar los ponderadores de aquellas personas que se encuentran ocupadas. (La lógica seria: _"Sumá los valores de la columna PONDERA, solo para aquellos registros donde el `ESTADO == 1`"_)    
+
+```{r}
+
+```
+
+<br>
+
+3.8. A partir de la información anterior, calcular la **tasa de empleo**, definida como:            
+
+- Tasa de empleo:  $\frac{Ocupados}{Poblacion}$ 
+      
+
+```{r}
+
+```
+
+<br>
+
+3.9. Crear una tabla llamada **tasas** que me de la información del total de población, el total de  ocupados, el total de desocupados, de la PEA (ocupados + desocupados) y calcular la tasa de actividad, empleo y desocupación.
+
+- Tasa de actividad:  $\frac{PEA}{Poblacion}$ 
+
+- Tasa de desocupacion:  $\frac{Desocupados}{PEA}$ 
+
+
+```{r}
+
+```
+
+<br>
+
+3.10. Cambiar el formato de la tabla para que queden los nombres de las tasas en la primer columna y los valores en la segunda columna.
+
+
+```{r}
+
+```
