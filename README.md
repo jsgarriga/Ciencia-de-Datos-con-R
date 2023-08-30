@@ -18,7 +18,7 @@ Para toda aquella persona que quiera / necesite trabajar con datos de una forma 
 
 La idea es escribir código, mucho pero mucho código. Si bien habrá secciones expositivas, el curso se plantea generar un espacio de constante práctica y consulta.
 
-- Consultar el documento </puesta_a_punto.md>
+- Consultar el documento [puesta_a_punto.md](https://github.com/jsgarriga/Ciencia-de-Datos-con-R/blob/master/puesta_a_punto.md)
 
 ## ¿Cuándo?
 
