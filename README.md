@@ -18,6 +18,8 @@ Para toda aquella persona que quiera / necesite trabajar con datos de una forma 
 
 La idea es escribir código, mucho pero mucho código. Si bien habrá secciones expositivas, el curso se plantea generar un espacio de constante práctica y consulta.
 
+- Consultar el documento </puesta_a_punto.md>
+
 ## ¿Cuándo?
 
 - Inicio: Martes 12 de septiembre del 2023
