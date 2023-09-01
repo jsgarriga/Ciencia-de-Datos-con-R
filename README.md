@@ -30,7 +30,9 @@ La idea es escribir código, mucho pero mucho código. Si bien habrá secciones 
 ## Contenidos
 
 ### 1. Introducción al lenguaje de programación estadístico R 
-Dictado por Jess Garriga. Estudiante avanzade de Sociología (Universidad Nacional de Cuyo, Argentina). Cientista de Datos, especializade en Inteligencia Empresarial. Investigadore en el Proyecto SIIP “Big Data y ciencias sociales: un abordaje crítico para la innovación metodológica”. Organizadore de R-Ladies Mendoza.
+Dictado por [Jess Garriga](https://github.com/jsgarriga). 
+
+Estudiante avanzade de Sociología (Universidad Nacional de Cuyo, Argentina). Cientista de Datos, especializade en Inteligencia Empresarial. Investigadore en el Proyecto SIIP “Big Data y ciencias sociales: un abordaje crítico para la innovación metodológica”. Organizadore de R-Ladies Mendoza.
 
 Fecha: 12 de septiembre de 2023. 
 Duración: 5 horas.
@@ -43,7 +45,9 @@ Duración: 5 horas.
    - Ejemplo de un proyecto de Ciencia de Datos
 
 ### 2. Manipulación de datos utilizando el ecosistema Tidyverse 
-Dictado por Ana Laura Diedrichs. Instructora certificada de RStudio Tidyverse. Profesora de Informática e Internet de las Cosas (Departamento de Ingeniería Electrónica), Aprendizaje Automático e Inteligencia Artificial (Departamento de Sistemas de Información) en UTN, FRM (Universidad Tecnológica Nacional, Facultad Regional Mendoza). Cofundadora y organizadora de R-Ladies Mendoza.
+Dictado por [Ana Laura Diedrichs](https://github.com/anadiedrichs). 
+
+Instructora certificada de RStudio Tidyverse. Profesora de Informática e Internet de las Cosas (Departamento de Ingeniería Electrónica), Aprendizaje Automático e Inteligencia Artificial (Departamento de Sistemas de Información) en UTN, FRM (Universidad Tecnológica Nacional, Facultad Regional Mendoza). Cofundadora y organizadora de R-Ladies Mendoza.
 
 Fecha: 13 de septiembre de 2023. 
 Duración: 5 horas.
@@ -53,7 +57,7 @@ Duración: 5 horas.
    - Tratamiento de valores faltantes (NA's)
    - Cálculo de medidas estadísticas de resumen para los datos
 ### 3. Visualización de datos con ggplot2 
-Organizadoris de R-Ladies Mendoza.
+Organizadoris de [R-Ladies Mendoza](https://www.meetup.com/es/rladies-mendoza/).
 
 Fecha: 14 de septiembre de 2023.
 Duración: 5 horas.
@@ -63,7 +67,9 @@ Duración: 5 horas.
    - Personalización de gráficos: Leyendas, ejes, títulos, notas, colores y escalas
    
 ### 4. Introducción a la confección de informes con Quarto 
-Dictado por Jan Strappa. Doctore en Ciencias de la Computación, Ingeniere en Sistemas de Información en CONICET (Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina). Cofundadore y organizadore de R-Ladies Mendoza.
+Dictado por [Jan Strappa](https://github.com/jstrappa/). 
+
+Doctore en Ciencias de la Computación, Ingeniere en Sistemas de Información en CONICET (Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina). Cofundadore y organizadore de R-Ladies Mendoza.
 
 Fecha: 15 de septiembre de 2023. 
 Duración: 5 horas.
