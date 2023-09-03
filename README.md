@@ -10,6 +10,8 @@ El taller tiene como principal objetivo introducir a les participantes en el mun
 
 Grupo de Meetup de R-Ladies Mendoza: https://www.meetup.com/es/rladies-mendoza/
 
+**ACCEDE A LAS DEMOSTRACIONES DEL TALLER EN:** <https://github.com/jsgarriga/demostracion-analisis-r-eph>
+
 ## ¿Para quién?
 
 Para toda aquella persona que quiera / necesite trabajar con datos de una forma más sistemática, ordenada y productiva. No se requiere conocimientos previos de programación, aunque siempre es de ayuda haberse cruzado al menos con una sintaxis o haber utilizado alguna fórmula en Excel.
