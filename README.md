@@ -19,6 +19,7 @@ Para toda aquella persona que quiera / necesite trabajar con datos de una forma 
 La idea es escribir código, mucho pero mucho código. Si bien habrá secciones expositivas, el curso se plantea generar un espacio de constante práctica y consulta.
 
 - Consultar el documento [puesta_a_punto.md](https://github.com/jsgarriga/Ciencia-de-Datos-con-R/blob/master/puesta_a_punto.md)
+- Instalación de los programas: [0_Instalación de R y RStudio](https://github.com/jsgarriga/curso-analisis-datos-r/blob/main/otros_recursos/0_Instalaci%C3%B3n%20de%20R%20y%20RStudio/0_Instalaci%C3%B3n%20de%20R%20y%20RStudio.md)
 
 ## ¿Cuándo?
 
