@@ -1,0 +1,4 @@
+- source: slides-r-ccss.qmd
+  quarto-pub:
+    - id: b860a677-e097-4fbd-b3eb-8f68a5cab2ce
+      url: 'https://jgarriga.quarto.pub/datos-y-ciencias-sociales-con-r'

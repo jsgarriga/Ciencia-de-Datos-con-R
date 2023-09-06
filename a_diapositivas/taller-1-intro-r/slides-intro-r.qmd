@@ -1,0 +1,267 @@
+---
+title: "Introducción al lenguaje de programación estadístico R"
+subtitle: "Taller introductorio a la Ciencia de Datos con R"
+author: "Jess Garriga"
+format: 
+  revealjs:
+    logo: files/logo.png
+    css: logo.css
+    embed-resources: true
+    footer: "Introducción a R"
+    slide-number: true
+    code-overflow: wrap
+lang: es
+---
+
+## Sobre R-Ladies Mendoza
+
+:::: {.columns}
+::: {.column width="60%"}
+
+R-Ladies Mendoza es parte de una organización mundial para _promover la Diversidad de Género en la comunidad R_.
+
+**¿Dónde pueden enterarse de nuestras actividades?**
+
+- Nuestro grupo de [Meetup](https://www.meetup.com/es/rladies-mendoza/)
+- Nuestra cuenta de [Twitter](https://twitter.com/RLadiesMza)
+
+
+:::
+
+::: {.column width="40%"}
+![](./files/mza.jpg)
+:::
+::::
+
+# ¿Qué es R?
+
+## Sobre R
+
+:::: {.columns}
+::: {.column width="60%"}
+
+R es un **lenguaje de programación estadístico** de **código abierto** utilizado por profesionales, cientistas de datos y personal estadístico. Su comunidad principal es [CRAN](https://cran.rstudio.com/), una red de repositorios que alojan miles de paquetes **FOSS** para **análisis, modelado, visualización, webscraping y más sobre diversos datos**.
+
+:::
+
+::: {.column width="40%"}
+![](./files/Rlogo.svg)
+:::
+::::
+
+## Historia
+
+R se origina en S, un lenguaje de programación privativo creado en los **Laboratorios Bell** de Estados Unidos (creadores del sistema operativo Unix, etc.).
+
+En 1992, [Ross Ihaka](https://en.wikipedia.org/wiki/Ross_Ihaka) y [Robert Gentleman](https://computationalbiomed.hms.harvard.edu/about/people/robert-gentleman-phd/) crearon una **implementación abierta y gratuita** de S, a saber, R. En 1995 sale una versión inicial y en el 2000 una versión final estable.
+
+Actualmente, el mantenimiento y desarrollo de R es realizado por el _R Development Core Team_, un equipo de especialistas de diferentes instituciones alrededor del mundo.
+
+## Por qué usar R
+
+R es **distribuido de manera gratuita**, a través de la **Licencia Pública General de GNU**, por lo que es **software libre y de código abierto** (_FOSS_). Podés estudiar su código y hasta crear tus propias versiones. **La licencia te permite usar R para los fines que desees, sin limitaciones**.
+
+## Instalación de R, RStudio y Quarto
+
+- Podés descargar el **programa R** desde: <https://cran.rstudio.com/>
+- El IDE(^[*"Entorno de Desarrollo Integrado"* o *"Integrated Development Environment"* en inglés]) más popular es **RStudio**, y podés bajarlo en: <https://posit.co/download/rstudio-desktop/>
+- Descargar e instalar **Quarto** desde: <https://quarto.org/docs/get-started>
+
+## R Base incluye...
+
+- **Valores** (unidad mínima de trabajo, clase numérico, caracter, cadenas...)
+- **Vectores** ("variables"; conjunto de valores)
+- **Funciones** (operación computacional que nos permite resolver problemas por medio de argumentos y parámetros)
+- **Objetos** (el elemento más importante de R, a los cuales podemos asignarles distintos contenidos)
+- **Data frames** ("bases de datos"; objeto que contiene filas o casos y columnas o variables relacionadas entre sí)
+
+## Ejemplos
+
+- **Valores**: ```1; "dos"; "2"; "dos palabras"```
+- **Vectores**: ```c(1, 2, 3, 4, 5); c("perro", "gato")```
+- **Funciones**: ```sum(5,5,5); summary(datos_empleados)```
+- **Objetos**: ```animales = c("perro", "gato") ```
+- **Data frames**: ```datos_empleados <- data.frame(nombre, edad, peso)```
+- *Para ver todas las funciones, consultar en la consola* ```library(help = "base")```
+
+## Algunas funciones...{.smaller}
+
+| **Función**       | **Acción** |
+| ---               | ---   |
+| `dim()`           | *Nos dice cuántas filas y columnas tiene la base*|
+| `colnames()`      | *Devuelve todos los nombres de las variables de la base*|
+| `str()`           | *Devuelve una vista preliminar de la estructura de las variables*|
+| `summary()`       | *Devuelve un resúmen de medidas centrales para variables numéricas y características para variables de texto *|
+| `class()`         | *Chequeo el tipo de objeto*|
+
+## Algunas funciones...{.smaller}
+
+| **Función**       | **Acción** |
+| ---               | ---   |
+| `length()`        | *Devuelve la cantidad de elementos de un objeto*|
+| `table()`         | *Frecuencia simple o bivariada de una variable*|
+| `is.na()`         | *Verifica la presencia de valores NA (_missing_) en la base/variable*|
+| `mean()`          | *Calcula el valor promedio (media) de una variable numérica*|
+
+# Amplia gama de paquetes
+
+## Varios paquetes para lo que necesites
+
+R es una excelente opción para las ciencias sociales, de datos y la estadística debido a su **flexibilidad y capacidad para manipular y visualizar datos de manera efectiva**. Cuenta con **muchos paquetes y librerías especializadas** para diversas tareas de análisis, lo que permite a les usuaries adaptar su enfoque a las **necesidades específicas de su proyecto**.
+
+## Librería ```eph```
+
+:::: {.columns}
+::: {.column width="50%"}
+
+_"La librería eph tiene por objecto facilitar el trabajo de aquellos usuarios y usuarias de la Encuesta Permanente de Hogares - INDEC que deseen procesar datos de la misma mediante el lenguaje de programación R"._
+:::
+
+::: {.column width="50%"}
+![](./files/eph.png)
+:::
+::::
+
+## Tidyverse
+
+:::: {.columns}
+::: {.column width="50%"}
+
+Se trata de una **colección de paquetes de R diseñados para facilitar y mejorar el proceso de manipulación, análisis y visualización de datos**.
+:::
+
+::: {.column width="50%"}
+![](./files/tidyverse.png)
+:::
+::::
+
+## Instalación de Tidyverse
+
+- Ejecutar el siguiente código en la consola de R:
+
+```{}
+install.packages("tidyverse")
+```
+
+- Al iniciar sesión en R (independientemente del IDE):
+
+```{}
+library(tidyverse)
+```
+
+- En su web encontrarás recursos: <https://www.tidyverse.org/>
+
+## Tidy data para un análisis eficiente
+
+Una de las principales filosofías de Tidyverse es el enfoque de **"tidy data"**, que **promueve la estructuración de los datos de manera ordenada y consistente para facilitar su análisis**. También fomenta el uso de **pipes** (```%>%```)para **encadenar operaciones de manipulación de datos de manera intuitiva**.
+
+```{=html}
+<p align="center">
+  <img src="./files/data-science.svg" height="300">
+</p>
+```
+
+
+##
+
+![](./files/rtaller.png)
+
+##
+
+![](./files/Rfin.PNG)
+
+_Créditos a [Pablo Tiscornia y Andrea Gómez Vargas](https://github.com/pablotis/intro_r_aset)_
+
+# ¿Cómo se estructura un proyecto?
+
+## Proyectos y rutas de trabajo{.smaller}
+
+- 📂 proyecto_eph_sociologia
+    - 📂 docs_metodologicos
+        - 📄 _EPH_registro_1T2022.pdf_
+    - 📂 entradas
+        - 📄 _usu_hogar_T122.txt_
+        - 📄 _usu_individual_T122.csv_
+    - 📂 salidas
+        - 📄 _grafico_barras.png_
+    - 📂 scripts
+        - 📄 _1_levantar_datos.R_
+    - 📄 _proyecto_eph.Rproj_
+
+## Proyectos y flujo de trabajo
+
+1. Creo y armo la carpeta del proyecto
+1. Ubico los datos en la carpeta correspondiente (entradas)
+1. Abro Rstudio y creo un proyecto, ubicado en la carpeta principal (por ejemplo, _"proyecto_eph.Rproj"_)
+1. Creo un script para trabajar en R y lo guardo en la carpeta script
+1. En el script, cargo los paquetes cuyas funciones voy a utilizar. Creo un objeto en el cual voy a importar los datos.
+
+## Carga de datos en el proyecto
+
+```{}
+# Cargo la librería
+library(readr)
+
+# Cargo los datos
+dataset <- read_csv(readr_example("mtcars.csv"))
+
+# Visualizo los datos
+View(dataset)
+
+# NOTA: para obtener más ayuda sobre los parámetros de la función, ejecutar en la consola "?read_csv"
+```
+
+## Ejemplo de un proyecto
+
+![](./files/ejemplo_proyecto.PNG)
+
+## Ejemplo de un proyecto
+
+Visita el repositorio con demostraciones para el taller en:
+
+- <https://github.com/jsgarriga/demostracion-analisis-r-eph>
+
+Los archivos que contienen los proyectos son:
+
+- 📄 _taller_1.qmd_
+- 📄 _taller_2.qmd_
+- 📄 _taller_3.qmd_
+
+# Comunidades colaborativas en la ciencia de datos
+
+## R para todes
+
+R y los paquetes de CRAN son **software libre**. Al ser gratuitos los hacen **accesibles para una amplia gama de usuaries y organizaciones**. Entre otras cosas, el código fuente abierto permite a las personas **ver, modificar y distribuir el software de acuerdo a sus necesidades puntuales**. Esto fomenta la colaboración y la innovación en la comunidad.
+
+
+:::: {.columns}
+::: {.column width="50%"}
+
+![](./files/r4ds.png)
+
+:::
+
+::: {.column width="50%"}
+![](./files/rladies.png)
+:::
+::::
+
+# ¡Gracias por participar!
+
+# ¿Dudas? ¿Consultas?
+
+
+## Enlaces útiles{.smaller}
+
+- [Lenguaje R (descarga)](https://cran.rstudio.com/)
+- [Primeros pasos en RStudio](https://www.youtube.com/watch?v=-KKwS8BCLeg) + [descarga de RStudio](https://posit.co/download/rstudio-desktop/)
+- [Guía de Markdown](https://www.markdownguide.org/)
+- [Guía de Quarto](https://quarto.org/docs/get-started/)
+- [Grupo de R-Ladies Mendoza](https://www.meetup.com/es/rladies-mendoza/)
+- [Repositorio del Taller introductorio a la Ciencia de Datos con R](https://github.com/jsgarriga/Ciencia-de-Datos-con-R/)
+- [Libro online de "R para principiantes"](https://bookdown.org/jboscomendoza/r-principiantes4/)
+- [Libro online de "R para Ciencia de datos"](https://es.r4ds.hadley.nz/)
+- [Curso libre de "R para las ciencias sociales"](https://github.com/pablotis/intro_r_aset)
+- [Libro online de "Ciencia de Datos para Gente Sociable"](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/)
+- [Librería ```eph```](https://github.com/holatam/eph)
+- [Tidyverse](https://www.tidyverse.org) y [machetes](https://posit.co/resources/cheatsheets/)
