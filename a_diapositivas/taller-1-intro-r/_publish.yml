@@ -2,3 +2,9 @@
   quarto-pub:
     - id: b860a677-e097-4fbd-b3eb-8f68a5cab2ce
       url: 'https://jgarriga.quarto.pub/datos-y-ciencias-sociales-con-r'
+- source: slides-intro-r.qmd
+  quarto-pub:
+    - id: 6bb4013b-abae-4f61-a98a-8726eaa51305
+      url: 'https://jgarriga.quarto.pub/introducción-al-lenguaje-de-programación-estadístico-r'
+    - id: 71cdb1fb-2388-4205-a2dd-51c2dacb1d3a
+      url: 'https://jgarriga.quarto.pub/rladiesmza-taller-intro-r'

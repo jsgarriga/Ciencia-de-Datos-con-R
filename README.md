@@ -40,6 +40,8 @@ Estudiante avanzade de Sociología (Universidad Nacional de Cuyo, Argentina). Ci
 Fecha: 12 de septiembre de 2023. 
 Duración: 5 horas.
 
+[**DIAPOSITIVAS**](https://jgarriga.quarto.pub/rladiesmza-taller-intro-r/#/title-slide)
+
    - Fundamentos del lenguaje R base
    - Instalación de R y RStudio (Posit)
    - Trabajo con Data Frames 
