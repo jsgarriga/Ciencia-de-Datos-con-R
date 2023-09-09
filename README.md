@@ -12,6 +12,12 @@ Grupo de Meetup de R-Ladies Mendoza: https://www.meetup.com/es/rladies-mendoza/
 
 **ACCEDE A LAS DEMOSTRACIONES DEL TALLER EN:** <https://github.com/jsgarriga/demostracion-analisis-r-eph>
 
+## Condiciones
+
+Al participar en estos evento asumimos que has leído y aceptado nuestro **código de conducta/principios de convivencia**, disponible en: <https://github.com/rladies/.github/blob/master/CODE_OF_CONDUCT.md>
+
+> "R-Ladies se dedica a proporcionar una experiencia libre de acoso para todes. Desde R-Ladies no toleramos el acoso de les participantes en ninguna de las formas posibles. Este código de conducta aplica en todos los espacios de participación de R-Ladies, incluyendo reuniones, Twitter, Slack, listas de correo, tanto online como offline. Se espera que les participantes a les que se les pida detener cualquier comportamiento de acoso, cumplan de inmediato".
+
 ## ¿Quiénes somos?
 
 R-Ladies Mendoza es parte de una organización mundial para promover la Diversidad de Género en la comunidad R. Su misión es lograr una representación proporcional, alentando, inspirando y capacitando a personas de géneros que actualmente están subrepresentadas en la comunidad.
