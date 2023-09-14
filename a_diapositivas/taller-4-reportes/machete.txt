@@ -1,0 +1,50 @@
+format: 
+  revealjs:
+    footer: "Datos y Ciencias Sociales con R"
+    slide-number: true
+    code-overflow: wrap
+
+o
+
+format: 
+  beamer: 
+    aspectratio: 32
+    navigation: horizontal
+    theme: AnnArbor
+    colortheme: lily
+
+
+-----
+
+:::: {.columns}
+::: {.column width="50%"}
+
+hola
+
+:::
+
+::: {.column width="50%"}
+![](./files/tidyverse.png)
+:::
+::::
+
+-----
+
+:::: {.columns}
+::: {.column width="48%"}
+hola
+:::
+
+::: {.column width="4%"}
+:::
+
+::: {.column width="48%"}
+chau
+:::
+::::
+
+-----
+
+<p align="center">
+  <img src="http://some_place.com/image.png" height="value">
+</p>

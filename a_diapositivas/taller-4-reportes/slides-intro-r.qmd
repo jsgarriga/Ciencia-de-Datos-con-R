@@ -1,0 +1,237 @@
+---
+title: "Introducción a la confección de informes con Quarto"
+subtitle: "Taller introductorio a la Ciencia de Datos con R"
+author: "Jan Strappa"
+format: 
+  revealjs:
+    logo: files/logo.png
+    css: logo.css
+    embed-resources: true
+    footer: "Introducción a R"
+    slide-number: true
+    code-overflow: wrap
+lang: es
+---
+
+
+## Introducción a la confección de informes con Quarto
+
++ Introducción a Quarto
++ Aspectos básicos de YAML para la estructura del informe
++ Contenido: bloques de código, texto con formato, estilos
++ Renderización de informes en formato html, pdf y docx
++ Compartir y presentar reportes
+
+
+
+## Sobre R-Ladies Mendoza
+
+:::: {.columns}
+::: {.column width="60%"}
+
+R-Ladies Mendoza es parte de una organización mundial para _promover la Diversidad de Género en la comunidad R_.
+
+**¿Dónde pueden enterarse de nuestras actividades?**
+
+- Nuestro grupo de [Meetup](https://www.meetup.com/es/rladies-mendoza/)
+- Nuestra cuenta de [Twitter](https://twitter.com/RLadiesMza)
+
+
+:::
+
+::: {.column width="40%"}
+![](./files/mza.jpg)
+:::
+::::
+
+# ¿Qué es Quarto?
+
+## Sobre Quarto
+
+:::: {.columns}
+::: {.column width="60%"}
+
+TODO
+
+[**Quarto**](https://quarto.org/) (.qmd): es un sistema open source system para publicaciones...
+[AGREGAR qué permite crear, que es de Posit, etc, brevemente]
+
+:::
+
+::: {.column width="40%"}
+![](files/quarto.png)
+:::
+::::
+
+
+
+
+
+## Instalación de R, RStudio y Quarto
+
+- Podés descargar el *programa R* desde: <https://cran.rstudio.com/>
+- El IDE(^[*"Entorno de Desarrollo Integrado"* o *"Integrated Development Environment"* en inglés]) más popular es *RStudio*, y podés bajarlo en: <https://posit.co/download/rstudio-desktop/>
+- [__Descargar e instalar *Quarto* desde: <https://quarto.org/docs/get-started>__]{style="color: darkred;"}
+
+
+
+## ¿Qué herramientas usás actualmente para crear tus reportes?
+
+TODO
+
+LINK MENTI 
+
+:::: {.columns}
+
+::: {.column width="33%"}
+![](files/word.png){.absolute width="300"}
+:::
+
+
+::: {.column width="33%"}
+![](files/excel_formula.jpg){.absolute width="300"}
+:::
+
+::: {.column width="33%"}
+
+![](files/excel_date.jpg){.absolute width="300"}
+
+:::
+
+::::
+
+
+
+
+
+
+## ¿Por qué usar Quarto?  {.smaller}
+
+- No necesitas saber de programación para usar Quarto
+- Los documentos están en texto plano: se puede usar cualquier editor
+- Software libre: comunidad, ayuda y tutoriales online, filosofía orientada a compartir conocimiento
+- Permite transparencia y reproducibilidad: ideal para investigadores
+- Mayor control sobre el contenido, más fácil de mantener: combina código, texto, referencias bibliográficas e imágenes en un solo lugar.
+- Muchas opciones de formatos y publicación online (gratuitas o pagas)
+
+
+
+
+
+
+## Un poco de historia y contexto  {.smaller}
+
+- **Markdown** (.md): lenguaje de marcado de documentos (_markup_)
+- [**Quarto**](https://quarto.org/) (.qmd): sistema open source para publicaciones (Markdown + código)
+
+:::: {.columns}
+::: {.column width="50%"}
+```{.md}
+Un encabezado de primer nivel
+=============================
+
+Un encabezado de segundo nivel
+------------------------------
+
+Algunas palabras *tienen énfasis*.
+Las palabras siguientes _también tienen énfasis_.
+
+Usamos dos asteriscos para **mayor énfasis**.
+O, si preferís, usá __dos guiones bajos__.
+
+### Encabezado 3
+
+> Esto es una cita.
+>
+> ## Esto es un encabezado dentro de una cita
+
+Una lista
+
+- un item
+- otro item
+
+Una lista ordenada
+
+1. un paso
+1. otro paso
+```
+:::
+::: {.column width="45%"}
+![](files/markdown.png){width=80%}
+:::
+::::
+
+
+## Herramientas y formatos que usaremos
+
+|Nombre    | Extensión| Uso           |
+|----------|----------|---------------|
+|Quarto    | .qmd     | contenido     |
+|YAML      | .yml     | configuración |
+|CSS       | .css     | estilo        |
+|HTML      | .html    | salida        |
+
+
+::: {.r-stack}
+![](files/qmd-how-it-works.png){width=100%}
+:::
+
+
+
+
+
+## Proceso 
+
+1. El IDE crea la estructura del proyecto de publicación
+2. nos enfocamos en el contenido y estilo
+3. El IDE renderiza el proyecto
+4. repetimos pasos 2 y 3
+5. publicamos (para proyecto online)
+
+![](files/fix.jpg){.absolute bottom=60 right=50 width=35%}
+
+
+
+##
+
+TODO 
+
+todo lo que sigue
+
+
+
+## Librería ```eph```
+
+:::: {.columns}
+::: {.column width="50%"}
+
+_"La librería eph tiene por objecto facilitar el trabajo de aquellos usuarios y usuarias de la Encuesta Permanente de Hogares - INDEC que deseen procesar datos de la misma mediante el lenguaje de programación R"._
+:::
+
+::: {.column width="50%"}
+![](./files/eph.png)
+:::
+::::
+
+## TODO
+
+
+# ¡Gracias por participar!
+
+# ¿Dudas? ¿Consultas?
+
+
+## Enlaces útiles{.smaller}
+
+- [Lenguaje R (descarga)](https://cran.rstudio.com/)
+- [Primeros pasos en RStudio](https://www.youtube.com/watch?v=-KKwS8BCLeg) + [descarga de RStudio](https://posit.co/download/rstudio-desktop/)
+- [Guía de Markdown](https://www.markdownguide.org/)
+- [Guía de Quarto](https://quarto.org/docs/get-started/)
+- [Grupo de R-Ladies Mendoza](https://www.meetup.com/es/rladies-mendoza/)
+- [Repositorio del Taller introductorio a la Ciencia de Datos con R](https://github.com/jsgarriga/Ciencia-de-Datos-con-R/)
+- [Libro online de "R para principiantes"](https://bookdown.org/jboscomendoza/r-principiantes4/)
+- [Libro online de "R para Ciencia de datos"](https://es.r4ds.hadley.nz/)
+- [Curso libre de "R para las ciencias sociales"](https://github.com/pablotis/intro_r_aset)
+- [Libro online de "Ciencia de Datos para Gente Sociable"](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/)
+- [Librería ```eph```](https://github.com/holatam/eph)
+- [Tidyverse](https://www.tidyverse.org) y [machetes](https://posit.co/resources/cheatsheets/)
