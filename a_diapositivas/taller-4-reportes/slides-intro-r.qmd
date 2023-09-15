@@ -318,3 +318,4 @@ execute:
 - [Libro online de "Ciencia de Datos para Gente Sociable"](https://bitsandbricks.github.io/ciencia_de_datos_gente_sociable/)
 - [Librería ```eph```](https://github.com/holatam/eph)
 - [Tidyverse](https://www.tidyverse.org) y [machetes](https://posit.co/resources/cheatsheets/)
+- Ilustración: [The Latest Kate](https://www.thelatestkate.art/)
