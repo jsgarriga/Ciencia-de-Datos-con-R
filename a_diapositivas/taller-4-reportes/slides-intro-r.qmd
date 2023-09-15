@@ -51,10 +51,11 @@ R-Ladies Mendoza es parte de una organización mundial para _promover la Diversi
 :::: {.columns}
 ::: {.column width="60%"}
 
-TODO
 
-[**Quarto**](https://quarto.org/) (.qmd): es un sistema open source system para publicaciones...
-[AGREGAR qué permite crear, que es de Posit, etc, brevemente]
+
+[**Quarto**](https://quarto.org/) (.qmd): es un sistema de código abierto para publicaciones científicas y técnicas.
+
+Permite crear muchos tipos de publicaciones, tales como artículos, informes, sitios web, libros, blogs.
 
 :::
 
@@ -77,9 +78,9 @@ TODO
 
 ## ¿Qué herramientas usás actualmente para crear tus reportes?
 
-TODO
+¡Vamos al quiz!
 
-LINK MENTI 
+<https://www.menti.com/alqanvnvc7zv>
 
 :::: {.columns}
 
@@ -192,29 +193,111 @@ Una lista ordenada
 
 
 
-##
+## Crear proyecto en RStudio
 
-TODO 
-
-todo lo que sigue
+![](files/newproject.png)
 
 
+## Crear proyecto en RStudio
 
-## Librería ```eph```
+![](files/newproject2.png)
+
+
+## Mi primer archivo `qmd`
 
 :::: {.columns}
 ::: {.column width="50%"}
 
-_"La librería eph tiene por objecto facilitar el trabajo de aquellos usuarios y usuarias de la Encuesta Permanente de Hogares - INDEC que deseen procesar datos de la misma mediante el lenguaje de programación R"._
+```{qmd}
+
+---
+title: "mi_reporte"
+---
+
+## Quarto
+
+Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+
+
+'```{r}
+1 + 1
+'```
+
+```
+
 :::
 
-::: {.column width="50%"}
-![](./files/eph.png)
+::: {.column width="45%"}
+![](files/newprojectout.png){width=80%}
 :::
 ::::
 
-## TODO
+## Distintas salidas
 
+
+:::: {.columns}
+::: {.column width="40%"}
+
+1. Agregamos `format: pdf` en el YAML
+
+```{yaml}
+---
+title: "mi_reporte"
+format:
+  pdf
+---
+```
+
+2. "render" → 
+
+:::
+
+::: {.column width="55%"}
+
+<iframe 
+  width="500" 
+  height="500" 
+  src="files/mi_reporte.pdf">
+</iframe>
+
+
+:::
+::::
+
+## Descargamos ejemplo
+
+<https://github.com/jsgarriga/demostracion-analisis-r-eph/blob/main/taller_2.qmd> 
+
+
+## Configurando el reporte con YAML
+
+```{yaml}
+---
+title: 'Taller II: Uso de R para analizar los datos de la Encuesta Permanente de Hogares (INDEC, Argentina)'
+subtitle: 'Demostración para el Taller introductorio a la Ciencia de Datos con R: Manipulación de datos utilizando el ecosistema Tidyverse'
+author:
+  - name: Jess Garriga
+date: "09/03/2023"
+lang: es
+format:
+  html:
+    toc: true
+    toc-depth: 4
+    toc-location: left
+    code-fold: false
+    code-summary: Mostrar código
+    code-tools: true
+    code-link: true
+    self-contained: true
+execute:
+  enabled: true
+---
+```
+
+
+## Ejemplo
+
+*Continuamos con el ejemplo en RStudio...*
 
 # ¡Gracias por participar!
 
@@ -225,7 +308,7 @@ _"La librería eph tiene por objecto facilitar el trabajo de aquellos usuarios y
 
 - [Lenguaje R (descarga)](https://cran.rstudio.com/)
 - [Primeros pasos en RStudio](https://www.youtube.com/watch?v=-KKwS8BCLeg) + [descarga de RStudio](https://posit.co/download/rstudio-desktop/)
-- [Guía de Markdown](https://www.markdownguide.org/)
+- Guía de Markdown: [inglés](https://www.markdownguide.org/) | [español](https://markdown.es/sintaxis-markdown/)
 - [Guía de Quarto](https://quarto.org/docs/get-started/)
 - [Grupo de R-Ladies Mendoza](https://www.meetup.com/es/rladies-mendoza/)
 - [Repositorio del Taller introductorio a la Ciencia de Datos con R](https://github.com/jsgarriga/Ciencia-de-Datos-con-R/)
