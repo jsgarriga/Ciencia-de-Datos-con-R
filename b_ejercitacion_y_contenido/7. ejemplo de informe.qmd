@@ -1,0 +1,91 @@
+---
+title: "Uso de R para analizar la EPH"
+subtitle: "Taller de R-Ladies Mendoza"
+author: 
+  - name: "Yaz"
+  - name: "Jan"
+  - name: "Ana Laura"
+date: "09/15/2023"
+lang: es
+format: docx
+---
+
+# Prerrequisitos
+
+Vamos a importar las librerías con las que trabajar
+
+```{r include=FALSE}
+library(eph)
+library(tidyverse)
+library(gt)
+```
+
+#### Veamos
+
+```{r}
+library(eph)
+library(tidyverse)
+library(gt)
+```
+
+Ahora, vamos a cargar los datos
+
+```{r}
+# Importamos los datos de la librería EPH
+base_eph <- eph::toybase_individual_2016_04
+base_eph <- as_tibble(base_eph)
+
+# Veamos 5 registros aleatorios del conjunto de datos
+sample_n(base_eph, 5)
+```
+
+### Algunas demostraciones de lo visto en los talleres
+
+**Manipulación de datos**
+
+```{r}
+# - AGLOMERADO
+# 10 = Gran Mendoza
+# 26 = Gran San Luis
+# 27 = Gran San Juan
+# - Condición de actividad = ESTADO
+# 0 = Entrevista individual no realizada
+# 1 = Ocupado
+# 2 = Desocupado
+# 3 = Inactivo
+# 4 = Menor de 10 años
+cuyo <- base_eph %>%
+  filter(AGLOMERADO %in% c(10, 26, 27)) %>%
+  count(AGLOMERADO, ESTADO) %>%
+  group_by(AGLOMERADO) %>%
+  mutate(peso = round(n / sum(n) * 100, digits = 2))
+
+# Lo convertimos a tabla con gt
+gt(cuyo)
+```
+
+**Visualización de datos**
+
+```{r}
+# Filtro por aglomerados de Cuyo, por sexo
+# CH04 = Sexo: 1 masculino, 2 femenino
+base_eph %>%
+  filter(AGLOMERADO %in% c(10, 26, 27)) %>%
+  count(AGLOMERADO, CH04) %>%
+  ggplot(aes(x = as.factor(AGLOMERADO),
+             y = n)) +
+  geom_col(aes(fill = as.factor(AGLOMERADO))) +
+  facet_wrap(facets = "CH04") +
+  geom_text(aes(label = n),
+            vjust = -0.25) +
+  labs(title = "Cantidad de personas por sexo en Cuyo",
+       x = "Aglomerados de Cuyo",
+       y = "Cantidad de personas",
+       fill = "Aglomerados",
+       caption = "Notas: 1. Masculino, 2. Femenino")
+
+```
+
+Fin
+
+

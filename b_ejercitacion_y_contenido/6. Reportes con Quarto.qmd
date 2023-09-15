@@ -1,0 +1,102 @@
+---
+title: "Uso de R para analizar los datos de la Encuesta Permanente de Hogares (INDEC, Argentina)"
+author: 
+  - name: "Jess Garriga"
+  - name: "Jan Strappa"
+  - name: "Ana Laura Diedrichs"
+date: "09/15/2023"
+lang: es
+format: docx
+---
+
+## Empezamos... Esto es un encabezado
+
+A continuación, código:
+
+```{r}
+1 + 1 
+```
+
+Chau, _por ahora..._
+
+## Código de los talleres previos
+
+**Cargamos las librerías necesarias**
+
+```{r include=FALSE}
+suppressPackageStartupMessages({
+  library("eph", quietly = TRUE)
+  library("tidyverse", quietly = TRUE)
+  library("gt", quietly = TRUE)
+})
+```
+
+```{r}
+# Cargamos las librerías
+  library("eph", quietly = TRUE)
+  library("tidyverse", quietly = TRUE)
+  library("gt", quietly = TRUE)
+```
+
+
+**Cargamos el conjunto de datos y exploramos una muestra**
+
+```{r}
+# Cargamos los datos como tibble
+base_eph <- eph::toybase_individual_2016_04
+base_eph <- as_tibble(base_eph)
+
+# Visualizamos una muestra de 10 registros aleatorios
+sample_n(base_eph, 10)
+```
+
+**Ejemplo de manipulación de datos**
+
+```{r}
+# - AGLOMERADO
+# 10 = Gran Mendoza
+# 26 = Gran San Luis
+# 27 = Gran San Juan
+# - Condición de actividad = ESTADO
+# 0 = Entrevista individual no realizada
+# 1 = Ocupado
+# 2 = Desocupado
+# 3 = Inactivo
+# 4 = Menor de 10 años
+cuyo <- base_eph %>% 
+  filter(AGLOMERADO %in% c(10, 26, 27)) %>% 
+  count(AGLOMERADO, ESTADO) %>% 
+  group_by(AGLOMERADO) %>% 
+  mutate(peso = round(n / sum(n) * 100, digits = 2))
+
+# Veamos el resumen en una tabla
+gt(cuyo)
+```
+
+**Ejemplo de visualización**
+
+```{r}
+# Filtro por aglomerados y sexo. Visualizamos
+# 10 = Gran Mendoza
+# 26 = Gran San Luis
+# 27 = Gran San Juan
+# - Sexo = CH04: 1 masculino, 2 femenino
+base_eph %>%
+  filter(AGLOMERADO %in% c(10, 26, 27)) %>%
+  count(AGLOMERADO, CH04) %>%
+  ggplot(mapping = aes(x = as.factor(AGLOMERADO),
+                       y = n)) +
+  geom_col(aes(fill = as.factor(AGLOMERADO))) +
+  facet_wrap(facets = "CH04") +
+  geom_text(aes(label = n),
+            vjust = -0.25) +
+  labs(title = "Cantidad de personas por sexo en Cuyo",
+       x = "Aglomerados de Cuyo",
+       y = "Cantidad de personas",
+       fill = "Aglomerados",
+       caption = "Notas: 1. Masculino, 2. Femenino")
+```
+
+Ok, ahora sí armemos un informe donde comunicar hallazgos...
+
+
